@@ -10,7 +10,7 @@ body {
 .flip-card-container {
   display: flex;
   justify-content: space-around;
-  gap: 20px; /* Space between the cards */
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -31,7 +31,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card.flip .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -59,7 +59,7 @@ body {
   
 <div class="flip-card-container">
   <!-- Card 1 -->
-  <div class="flip-card">
+  <div class="flip-card" onclick="flipCard(this)">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img src="image 1.png" alt="Image 1" style="width:300px;height:300px;">
@@ -71,7 +71,7 @@ body {
   </div>
 
   <!-- Card 2 -->
-  <div class="flip-card">
+  <div class="flip-card" onclick="flipCard(this)">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img src="image 2.png" alt="Image 2" style="width:300px;height:300px;">
@@ -83,7 +83,7 @@ body {
   </div>
 
   <!-- Card 3 -->
-  <div class="flip-card">
+  <div class="flip-card" onclick="flipCard(this)">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img src="image 3.png" alt="Image 3" style="width:300px;height:300px;">
@@ -95,7 +95,7 @@ body {
   </div>
 
   <!-- Card 4 -->
-  <div class="flip-card">
+  <div class="flip-card" onclick="flipCard(this)">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img src="image 4.png" alt="Image 4" style="width:300px;height:300px;">
@@ -109,19 +109,25 @@ body {
   </div>
 
   <!-- Card 5 -->
-  <div class="flip-card">
+  <div class="flip-card" onclick="flipCard(this)">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img src="image 5.png" alt="Image 5" style="width:300px;height:300px;">
       </div>
       <div class="flip-card-back">
         <h1>25 MAD</h1> 
-        <p>What does PWA Stand for?</p> 
+        <p>What does CRM Stand For?</p> 
         <p>x2 if answered correctly</p>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+function flipCard(card) {
+  card.classList.toggle("flip");
+}
+</script>
 
 </body>
 </html>
